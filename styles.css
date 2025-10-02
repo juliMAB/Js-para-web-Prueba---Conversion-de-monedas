@@ -74,12 +74,27 @@ button {
 /* Estados de resultado */
 .loading,
 .result,
-.error {
+.error,
+.chart-section {
     margin-top: 1rem;
 }
 
 .hidden {
     display: none !important;
+}
+
+/* Contenedor del gráfico */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-top: 15px;
+    background: white;
+    border: 1px solid #808080;
+    padding: 10px;
+}
+
+.chart-container canvas {
+    max-height: 100%;
 }
 
 /* Información de conversión */

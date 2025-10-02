@@ -6,6 +6,7 @@
     <title>Conversor de Monedas - Chile</title>
     <link rel="stylesheet" href="https://unpkg.com/7.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="window">
@@ -67,6 +68,16 @@
                                 <p class="final-result"><strong>Resultado:</strong> <span id="convertedAmount"></span></p>
                             </div>
                             <p class="update-date"><em>Última actualización: <span id="updateDate"></span></em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráfico de los últimos 3 días -->
+                <div id="chartSection" class="chart-section hidden">
+                    <div class="sunken-panel" style="padding: 15px;">
+                        <h3>Historial de los últimos 3 días</h3>
+                        <div class="chart-container">
+                            <canvas id="currencyChart" width="400" height="200"></canvas>
                         </div>
                     </div>
                 </div>
