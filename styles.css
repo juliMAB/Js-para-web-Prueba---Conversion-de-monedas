@@ -1,0 +1,154 @@
+/* Configuración compatible con 7.css */
+body {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+    font-family: 'MS Sans Serif', sans-serif;
+}
+
+/* Ventana principal con estilo Windows 7 */
+.window {
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor principal */
+.container {
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000080;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #000080;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Ajustes para los campos del formulario */
+.field-row {
+    margin-bottom: 15px;
+}
+
+.field-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.field-row input,
+.field-row select {
+    width: 100%;
+    padding: 8px;
+    border: 2px inset #c0c0c0;
+    background: white;
+}
+
+.field-row input:focus,
+.field-row select:focus {
+    outline: 1px dotted #000;
+}
+
+/* Botón personalizado */
+button {
+    padding: 8px 16px !important;
+    min-width: 100px;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+/* Estados de resultado */
+.loading,
+.result,
+.error {
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Información de conversión */
+.conversion-info p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.final-result {
+    font-weight: bold !important;
+    color: #000080 !important;
+}
+
+.update-date {
+    font-size: 12px !important;
+    color: #666 !important;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 12px;
+}
+
+footer a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #551a8b;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .window {
+        margin: 20px auto;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result:not(.hidden),
+.error:not(.hidden),
+.loading:not(.hidden) {
+    animation: fadeIn 0.3s ease;
+}

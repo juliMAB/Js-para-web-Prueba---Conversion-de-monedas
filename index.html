@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas - Chile</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Conversor de Monedas - Chile</div>
+        </div>
+        <div class="window-body">
+    <div class="container">
+        <header>
+            <h1>Conversor de Monedas</h1>
+            <p>Convierte desde Pesos Chilenos (CLP) a otras monedas</p>
+        </header>
+
+        <main>
+            <div class="converter-card">
+                <form id="converterForm">
+                    <div class="field-row">
+                        <label for="amount">Monto en CLP:</label>
+                        <input 
+                            type="number" 
+                            id="amount" 
+                            placeholder="Ingresa el monto en pesos chilenos"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="currency">Convertir a:</label>
+                        <select id="currency" required>
+                            <option value="">Selecciona una moneda</option>
+                            <option value="dolar">Dólar Americano (USD)</option>
+                            <option value="euro">Euro (EUR)</option>
+                            <option value="uf">Unidad de Fomento (UF)</option>
+                            <option value="utm">Unidad Tributaria Mensual (UTM)</option>
+                            <option value="dolar_intercambio">Dólar Intercambio</option>
+                        </select>
+                    </div>
+
+                    <div class="field-row" style="justify-content: center; margin-top: 20px;">
+                        <button type="submit" id="convertBtn">Convertir</button>
+                    </div>
+                </form>
+
+                <div id="loading" class="loading hidden">
+                    <div class="sunken-panel" style="padding: 10px;">
+                        <p>Obteniendo datos actuales...</p>
+                    </div>
+                </div>
+
+                <div id="result" class="result hidden">
+                    <div class="sunken-panel" style="padding: 15px;">
+                        <h3>Resultado de la conversión</h3>
+                        <div class="conversion-info">
+                            <p><strong>Monto original:</strong> <span id="originalAmount"></span> CLP</p>
+                            <p><strong>Moneda destino:</strong> <span id="targetCurrency"></span></p>
+                            <p><strong>Valor actual:</strong> <span id="exchangeRate"></span> CLP</p>
+                            <div class="sunken-panel" style="padding: 10px; margin: 10px 0; background-color: #c0c0c0;">
+                                <p class="final-result"><strong>Resultado:</strong> <span id="convertedAmount"></span></p>
+                            </div>
+                            <p class="update-date"><em>Última actualización: <span id="updateDate"></span></em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="error" class="error hidden">
+                    <div class="sunken-panel" style="padding: 10px; background-color: #ffcccc;">
+                        <p>Ha ocurrido un error al obtener los datos. Por favor, intenta nuevamente.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Datos obtenidos de <a href="https://mindicador.cl" target="_blank">mindicador.cl</a></p>
+        </footer>
+    </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
